@@ -28,8 +28,7 @@ document.getElementById("addressInput").addEventListener("input", async function
 
     if (!addressText) return;
 
-    let addresses = addressText.split("
-").map(a => a.trim()).filter(a => a);
+    let addresses = addressText.split("\n").map(a => a.trim()).filter(a => a);
     let bounds = new L.LatLngBounds();
 
     for (let address of addresses) {
