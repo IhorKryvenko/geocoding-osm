@@ -1,0 +1,53 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.inputs {
+    flex: 1;
+    min-width: 250px;
+}
+.inputs select, 
+.inputs textarea, 
+.inputs input {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+.table-container {
+    flex: 2;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+#map {
+    height: 400px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+#customCity {
+    display: none; /* Сховане поле для введення міста */
+}

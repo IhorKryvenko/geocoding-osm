@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Геокодування OSM</title>
+    <link rel="stylesheet" href="/GeoCodingProject_v2/styles.css" />
+    <script src="/GeoCodingProject_v2/script.js"></script>
+</head>
+<body>
+
+    <h2>Геокодування адрес (OSM Nominatim)</h2>
+
+    <div class="container">
+        <!-- Ліва частина: вибір міста та введення адрес -->
+        <div class="inputs">
+            <label for="citySelect">Виберіть місто:</label>
+            <select id="citySelect">
+                <option value="">Виберіть місто...</option>
+                <option value="custom">Ввести місто</option>
+                <option value="Дніпро">Дніпро</option>
+                <option value="Донецьк">Донецьк</option>
+                <option value="Житомир">Житомир</option>
+                <option value="Запоріжжя">Запоріжжя</option>
+                <option value="Івано-Франківськ">Івано-Франківськ</option>
+                <option value="Київ">Київ</option>
+                <option value="Кропивницький">Кропивницький</option>
+                <option value="Луганськ">Луганськ</option>
+                <option value="Львів">Львів</option>
+                <option value="Миколаїв">Миколаїв</option>
+                <option value="Одеса">Одеса</option>
+                <option value="Полтава">Полтава</option>
+                <option value="Рівне">Рівне</option>
+                <option value="Суми">Суми</option>
+                <option value="Тернопіль">Тернопіль</option>
+                <option value="Ужгород">Ужгород</option>
+                <option value="Харків">Харків</option>
+                <option value="Херсон">Херсон</option>
+                <option value="Хмельницький">Хмельницький</option>
+                <option value="Черкаси">Черкаси</option>
+                <option value="Чернівці">Чернівці</option>
+                <option value="Чернігів">Чернігів</option>
+                <option value="Вінниця">Вінниця</option>
+            </select>
+
+            <input type="text" id="customCity" placeholder="Введіть назву міста">
+
+            <label for="addressInput">Вставте список адрес (кожна в новому рядку):</label>
+            <textarea id="addressInput" rows="5" placeholder="Вставте сюди ваші адреси..."></textarea>
+        </div>
+
+        <!-- Права частина: таблиця -->
+        <div class="table-container">
+            <table id="addressTable">
+                <thead>
+                    <tr>
+                        <th>Адреса</th>
+                        <th>Координати</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+</body>
+</html>
